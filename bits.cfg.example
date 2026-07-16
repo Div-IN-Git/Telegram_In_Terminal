@@ -1,0 +1,30 @@
+[telegram]
+api_id = ""
+api_hash = ""
+bot_token = ""
+chat_id = 0
+session_name = "bits"
+
+[storage]
+download_dir = "~/Downloads"
+temp_dir = "~/.bits/tmp"
+
+[ignore]
+patterns = [
+  ".venv",
+  ".vscode",
+  ".git",
+  ".idea",
+  "node_modules",
+  "__pycache__",
+  ".pytest_cache",
+  "Thumbs.db",
+  "desktop.ini"
+]
+
+[sync]
+background_interval_seconds = 60
+auto_recall_on_drift = false
+
+[ui]
+theme = "dark"

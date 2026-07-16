@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "telegram-in-terminal"
+version = "0.1.0"
+description = "Versioned personal cloud storage backed by a private Telegram chat."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "telethon>=1.36",
+    "typer>=0.12",
+    "rich>=13.7",
+    "keyring>=25.0",
+    "cryptography>=42.0",
+    "tomli>=2.0; python_version < '3.11'",
+]
+
+[project.optional-dependencies]
+gui = ["pyside6>=6.7"]
+dev = ["pytest>=8.0", "pyinstaller>=6.0"]
+
+[project.scripts]
+bits = "bits_cli.main:app"
+bits-gui = "bits_gui.app:main"
+
+[tool.setuptools.packages.find]
+include = ["bitscore*", "bits_cli*", "bits_gui*"]
+
+[tool.setuptools.package-data]
+bitscore = ["db/schema.sql"]
+bits_gui = ["theme/*.qss"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q -p no:pytestqt"

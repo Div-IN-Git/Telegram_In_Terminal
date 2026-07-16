@@ -1,0 +1,3 @@
+[console_scripts]
+bits = bits_cli.main:app
+bits-gui = bits_gui.app:main

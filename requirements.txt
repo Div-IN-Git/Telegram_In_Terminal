@@ -1,4 +1,8 @@
-python-telegram-bot
-python-dotenv
-telethon
-requests
+telethon>=1.36
+typer>=0.12
+rich>=13.7
+keyring>=25.0
+cryptography>=42.0
+tomli>=2.0
+python-dotenv>=1.0
+python-telegram-bot>=21.0

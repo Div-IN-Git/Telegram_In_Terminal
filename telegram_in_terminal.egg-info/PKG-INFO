@@ -1,3 +1,22 @@
+Metadata-Version: 2.4
+Name: telegram-in-terminal
+Version: 0.1.0
+Summary: Versioned personal cloud storage backed by a private Telegram chat.
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: telethon>=1.36
+Requires-Dist: typer>=0.12
+Requires-Dist: rich>=13.7
+Requires-Dist: keyring>=25.0
+Requires-Dist: cryptography>=42.0
+Requires-Dist: tomli>=2.0; python_version < "3.11"
+Provides-Extra: gui
+Requires-Dist: pyside6>=6.7; extra == "gui"
+Provides-Extra: dev
+Requires-Dist: pytest>=8.0; extra == "dev"
+Requires-Dist: pytest-qt>=4.4; extra == "dev"
+Requires-Dist: pyinstaller>=6.0; extra == "dev"
+
 ﻿# Telegram_in_terminal
 
 `Telegram_in_terminal` is a versioned personal storage tool backed by a private Telegram chat. It provides:
